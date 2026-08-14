@@ -1,0 +1,10 @@
+from itertools import combinations
+
+n = int(input())
+letters = input().split()
+k = int(input())
+
+combos = list(combinations(letters, k))
+count = sum(1 for c in combos if 'a' in c)
+
+print(f"{count / len(combos):.4f}")
