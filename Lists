@@ -1,0 +1,12 @@
+if __name__ == '__main__':
+    N = int(input())
+    res = []
+    
+    for _ in range(N):
+        command = input().split()
+        action = command[0]
+        args = command[1:]
+        if action == "print":
+            print(res)
+        else:
+            getattr(res, action)(*map(int, args))
